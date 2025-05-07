@@ -62,6 +62,9 @@ p {
   margin-top: 1rem;
   border-radius: 25px;
 }
+.trek img:hover {
+  scale: 1.5;
+}
 
 .wrapper {
   text-align: center;
