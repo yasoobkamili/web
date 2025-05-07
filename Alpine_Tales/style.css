@@ -61,9 +61,7 @@ p {
   height: auto;
   margin-top: 1rem;
   border-radius: 25px;
-}
-.trek img:hover {
-  scale: 1.5;
+  transition: 1.5s;
 }
 
 .wrapper {
@@ -82,4 +80,7 @@ figcaption {
   text-align: center;
   border-radius: 20px;
   padding: 2px 5px;
+}
+.trek img:hover {
+  scale: 1.5;
 }
