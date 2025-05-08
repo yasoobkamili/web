@@ -2,6 +2,14 @@ h1 {
   font-family: "Trebuchet MS";
   color: rgb(35, 105, 82);
   text-align: center;
+  scale: 1.5;
+}
+.title {
+  background-color: rgba(97, 171, 194, 0.555);
+  height: 120px;
+  text-align: center;
+  border-radius: 20px;
+  padding: 2px 5px;
 }
 h2 {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -74,15 +82,9 @@ figcaption {
   font-family: monospace;
   font-weight: bold;
 }
-.title {
-  background-color: rgba(97, 171, 194, 0.555);
-  height: 120px;
-  text-align: center;
-  border-radius: 20px;
-  padding: 2px 5px;
-}
 .trek img:hover {
   scale: 1.5;
+  box-shadow: rgba(36, 121, 27, 0.442) 1px 1px 50px 5px;
 }
 .date {
   font-size: small;
