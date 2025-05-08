@@ -18,8 +18,8 @@ body {
   font-family: "poppins";
 }
 p {
-  color: rgb(11, 30, 34);
   font-family: "poppins";
+  color: rgb(5, 73, 82);
 }
 
 .trek-content {
@@ -83,4 +83,11 @@ figcaption {
 }
 .trek img:hover {
   scale: 1.5;
+}
+.date {
+  font-size: small;
+  color: rgb(16, 71, 97);
+  font-family: "Courier New", Courier;
+  font-style: italic;
+  font-weight: bold;
 }
