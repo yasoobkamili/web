@@ -17,9 +17,9 @@ h2 {
   color: rgb(16, 71, 97);
 }
 h3 {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  color: rgb(16, 107, 100);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode";
+  font-style: normal;
+  font-weight: light;
 }
 body {
   background-color: rgba(199, 226, 230, 0.486);
@@ -27,6 +27,7 @@ body {
 }
 p {
   font-family: "poppins";
+  font-style: normal;
   color: rgb(5, 73, 82);
 }
 
@@ -80,7 +81,6 @@ p {
 figcaption {
   font-style: italic;
   font-family: monospace;
-  font-weight: bold;
 }
 .trek img:hover {
   scale: 1.5;
