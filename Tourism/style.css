@@ -1,31 +1,42 @@
 .Typewriter {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .Typewriter h1 {
-    /* font-family: monospace; */
-    /* font-size: 1.5rem; */
-    margin-inline: auto;
-    overflow: auto;
-    white-space: nowrap;
-    border-right: 1px solid;
-    animation: typing 3s steps(22) forwards,
-        blink 1s step-end infinite;
+  /* font-family: monospace; */
+  /* font-size: 1.5rem; */
+  margin-inline: auto;
+  overflow: auto;
+  white-space: nowrap;
+  border-right: 1px solid;
+  animation: typing 3s steps(22) forwards, blink 1s step-end infinite;
 }
 
 @keyframes typing {
-    from {
-        width: 0;
-    }
+  from {
+    width: 0;
+  }
 
-    to {
-        width: 100%;
-    }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+  50% {
+    border-color: transparent;
+  }
 }
+.trek {
+  border: 5px solid black;
+}
+.trek video {
+  border-radius: 25px;
+}
+img {
+  border-radius: 25px;
+}
+/* video {
+  border-radius: 25px;
+} */
