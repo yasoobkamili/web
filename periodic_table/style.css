@@ -1,10 +1,11 @@
+body {
+  background-color: rgb(43, 55, 56);
+}
 .title {
-  background-color: bisque;
+  color: rgb(241, 231, 217);
+  font-size: 1.5rem;
   text-align: center;
   font-family: poppins;
-  border-width: 50px;
-  border-radius: 5px;
-  width: 500px;
   box-shadow: 5cap;
 }
 .at {
@@ -12,18 +13,29 @@
 }
 table {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 td {
   font-family: poppins;
+  font-weight: 500;
   color: rgb(243, 243, 243);
   text-align: center;
   border-radius: 5px;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
 }
 td:hover {
   scale: 1.5;
-  transition: 1s;
+  transition: 0.5s;
+  box-shadow: rgb(241, 241, 205) 2px 2px 50px;
+}
+.emptytd {
+  color: whitesmoke;
+}
+.emptytd:hover {
+  scale: 1;
+  box-shadow: none;
 }
 .c1 {
   /* seagreen hydrogen */
@@ -55,14 +67,14 @@ td:hover {
   background-color: rgb(168, 10, 63);
 }
 .c9 {
-  background-color: rgb(16, 194, 84);
+  background-color: rgb(56, 214, 117);
 }
 .c10 {
-  background-color: rgb(110, 215, 241);
+  background-color: rgb(84, 202, 231);
 }
 .c11 {
   background-color: rgb(118, 8, 182);
 }
 .c12 {
-  background-color: rgba(190, 43, 6, 0.774);
+  background-color: rgb(206, 71, 37);
 }
