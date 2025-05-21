@@ -35,11 +35,51 @@ td:hover {
 }
 .emptytd {
   color: whitesmoke;
+  font-size: smaller;
+  font-weight: 400;
 }
 .emptytd:hover {
   scale: 1;
   box-shadow: none;
 }
+.square {
+  height: 15px;
+  width: 15px;
+  background-color: red;
+}
+.square.s2 {
+  background-color: rgb(209, 212, 32);
+}
+.square.s3 {
+  background-color: rgb(230, 147, 23);
+}
+.square.s4 {
+  background-color: rgb(77, 151, 236);
+}
+
+.square.s6 {
+  background-color: rgb(8, 44, 85);
+}
+.square.s7 {
+  background-color: rgb(116, 130, 136);
+}
+
+.square.s8 {
+  background-color: rgb(168, 10, 63);
+}
+.square.s9 {
+  background-color: rgb(56, 214, 117);
+}
+.square.s10 {
+  background-color: rgb(84, 202, 231);
+}
+.square.s11 {
+  background-color: rgb(118, 8, 182);
+}
+.square.s12 {
+  background-color: rgb(206, 71, 37);
+}
+
 .c1 {
   /* seagreen hydrogen */
   background-color: rgb(14, 204, 179);
