@@ -10,7 +10,7 @@ body {
 
 #count {
   font-family: poppins;
-  font-size: 150px;
+  font-size: 80px;
   text-align: center;
   width: 100%;
   color: white;
@@ -36,5 +36,5 @@ body {
 .arabic-text {
   text-align: center;
   font-family: "Handjet", sans-serif;
-  font-size: 100px;
+  font-size: 80px;
 }
