@@ -1,0 +1,40 @@
+body {
+  background-color: rgb(31, 34, 34);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  margin: 0;
+}
+
+#count {
+  font-family: poppins;
+  font-size: 150px;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+#buttun {
+  border-radius: 5px;
+  width: 450px;
+  height: 150px;
+  font-family: poppins;
+  font-size: larger;
+  background-color: rgb(210, 233, 240);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#buttun:hover {
+  color: rgb(6, 65, 9);
+  background-color: rgb(107, 250, 63);
+  transition: 0.5s;
+}
+.arabic-text {
+  text-align: center;
+  font-family: "Handjet", sans-serif;
+  font-size: 100px;
+}
