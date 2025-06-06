@@ -1,40 +1,70 @@
-.title {
-  font-family: "Montserrat";
-  font-size: 60px;
-  font-weight: bold;
-  padding: 30px;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.links {
-  text-align: center;
+header {
+  font-family: "poppins";
+  font-size: 25px;
+
+  /* font-display:fallback ; */
+  border-left: solid black 6px;
+  padding-left: 20px;
+  text-align: left;
+  margin-right: 300px;
+  margin-left: 300px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
-.links a {
-  text-decoration: none;
-  font-family: "Montserrat";
-  font-size: x-large;
+
+.grid {
+  display: grid;
+  /* grid-template-columns: 50% auto; */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 50px;
+  gap: 25px;
+}
+.grid a {
+  font-family: poppins;
   padding: 15px;
-  color: black;
+  text-decoration: none;
+  color: #111;
+  font-size: 18px;
+  font-weight: 600;
+  border: 1px solid #111;
+  padding: 15px 20px;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
 }
 
-.links a:hover {
+.grid a:hover {
   background-color: black;
   color: white;
 }
 
 footer {
-  align-items: center;
+  background-color: black;
   text-align: center;
-  background-color: rgb(0, 0, 0);
-  padding: 20px;
-  margin: 5px;
+  align-items: center;
   position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
+  padding: 15px 10px;
+}
+footer img {
+  width: 30px;
 }
 footer a {
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  font-family: poppins;
   color: white;
-  font-family: "Montserrat";
+  text-decoration: none;
 }
