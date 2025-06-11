@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  padding: 0.5em;
+}
+body {
+  justify-content: center;
+  display: flex;
+}
+.container {
+  position: relative;
+  border: solid black 3px;
+  text-align: center;
+  width: 600px;
+  height: 600px;
+  font-family: poppins;
+  margin: 100px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.container::before {
+  background-image: url(bckgrnd.png);
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+  z-index: -1;
+}
+button {
+  color: black;
+  font-family: poppins;
+  font-weight: bold;
+  font-size: larger;
+  width: 200px;
+  height: 60px;
+  margin: 15px;
+  border: solid 1px;
+}
+.count {
+  margin: 5px;
+  font-size: 80px;
+  font-weight: bold;
+}
