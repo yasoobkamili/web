@@ -46,3 +46,22 @@ button {
   font-size: 80px;
   font-weight: bold;
 }
+
+@media (max-width: 800px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    /* background-color: red; */
+  }
+  .container {
+    /* background: yellow; */
+    border: none;
+    margin: 0;
+    min-width: 100vw;
+    height: 100vh;
+    padding: 0;
+  }
+}
