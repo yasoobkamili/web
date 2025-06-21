@@ -57,24 +57,41 @@
 
     #cityInput {
         height: 3rem;
-        width: 15rem;
+        width: 25rem;
         border: solid rgb(11, 108, 121) 2px;
         text-align: center;
         background-color: rgb(230, 230, 230);
         border: none;
-        margin: 1rem;
+        margin: 1rem 0;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+
+
+
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #searchButton {
-        width: 5rem;
-        height: 1.5rem;
-        margin: 1rem;
+        width: 8rem;
+        height: 3rem;
+        margin: 1rem 0;
         transition: background-color 0.3s ease;
         cursor: pointer;
+        background: rgb(13, 136, 236);
+        color: white;
+        font-size: 1.2rem;
+        padding: 0;
+        border: none;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
     }
 
     #searchButton:hover {
-        background-color: #1c75a8;
+        background-color: #1763b9;
         color: white;
     }
 
@@ -84,6 +101,12 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        font-size: x-large;
+    }
+
+    #searchButton svg {
+        display: none;
+
     }
 
     @media (max-width:600px) {
@@ -105,13 +128,39 @@
         }
 
         #cityInput {
-            width: 50vw;
+            width: 60vw;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
         }
 
         #cityName {
             margin: 0;
             padding: 0.5rem;
             font-size: 1.7rem;
+
+        }
+
+        .box {
+            margin: 0;
+            padding: 0;
+        }
+
+        #searchButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2rem;
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+
+        }
+
+        #searchButton svg {
+            display: block;
+        }
+
+        #searchButton span {
+            display: none;
         }
     }
 </style>
@@ -121,12 +170,18 @@
         <h1>auracast.</h1>
     </nav>
     <div class="container">
-        <h1 id="cityName">City Name</h1>
+        <h1 id="cityName">citynamre</h1>
         <br>
-        <input id="cityInput" type="text" placeholder="Enter City Name">
-        <br><br>
-        <button id="searchButton">Search</button>
-        <br><br>
+        <div class="box">
+            <input id="cityInput" type="text" placeholder="Enter City Name">
+            <button id="searchButton">
+                <svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" height="1.2rem" viewBox="0 -960 960 960"
+                    width="1.2rem" fill="#e3e3e3">
+                    <path
+                        d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                </svg>
+                <span>Search</span></button>
+        </div>
         <div class="block">
             <section id="dateTime">Date & Time:&nbsp</section>
             <section id="status">Status: </section>
