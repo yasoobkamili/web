@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auracast.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: poppins, Helvetica, sans-serif;
+
+    }
+
+    body {
+
+        /* min-height: 100vh; */
+        background-color: rgba(34, 34, 34, 0.842);
+        background-image: url(Screenshot\ from\ 2025-06-21\ 14-55-34.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+
+    nav {
+
+        position: sticky;
+        top: 0;
+        color: white;
+        font-size: xx-large;
+        width: 100%;
+    }
+
+    nav h1 {
+        padding: 1rem 0 1rem 3rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        height: 90vh;
+        width: 100vw;
+        border-radius: 1rem;
+        color: white;
+    }
+
+    #cityInput {
+        height: 3rem;
+        width: 15rem;
+        border: solid rgb(11, 108, 121) 2px;
+        text-align: center;
+        background-color: rgb(230, 230, 230);
+        border: none;
+        margin: 1rem;
+    }
+
+    #searchButton {
+        width: 5rem;
+        height: 1.5rem;
+        margin: 1rem;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+
+    #searchButton:hover {
+        background-color: #1c75a8;
+    }
+
+    .block {
+        line-height: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    @media (max-width:600px) {
+        body {
+            height: 100vh;
+        }
+
+        nav {
+            width: 100vw;
+            font-size: 6vw;
+        }
+
+        nav h1 {
+            padding: 0.5rem 0 0 0.5rem;
+        }
+
+        .container {
+            width: 100vw;
+        }
+
+        #cityInput {
+            width: 50vw;
+        }
+
+        #cityName {
+            margin: 0;
+            padding: 0.5rem;
+            font-size: 1.7rem;
+        }
+    }
+</style>
+
+<body>
+    <nav>
+        <h1>auracast.</h1>
+    </nav>
+    <div class="container">
+        <h1 id="cityName">City Name</h1>
+        <br>
+        <input id="cityInput" type="text" placeholder="Enter City Name">
+        <br><br>
+        <button id="searchButton">Search</button>
+        <br><br>
+        <div class="block">
+            <section id="dateTime">Date & Time:&nbsp</section>
+            <section id="status">Status: </section>
+            <section id="minTemp">
+                <h1>0&deg;C</h1>
+            </section>
+            <section id="feelTemp">Feels Like:&nbsp</section>
+            <!-- <section id="aqi">AQI:&nbsp</section> -->
+            <section id="humidity">Humidity:&nbsp</section>
+        </div>
+    </div>
+</body>
+<script>
+
+    let searchButton = document.getElementById("searchButton")
+    let cityName = document.getElementById("cityName")
+    let dateTime = document.getElementById("dateTime")
+    let minTemp = document.getElementById("minTemp")
+    let feelTemp = document.getElementById("feelTemp")
+    let status = document.getElementById("status")
+    // let maxTemp = document.getElementById("maxTemp")
+    // let aqi = document.getElementById("aqi")
+    let humidity = document.getElementById("humidity")
+
+
+    async function getData(city_name) {
+        let promise = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=f646c7f03f81444e8b793739252006&q=${city_name}&days=6&aqi=yes&alerts=no`);
+        return await promise.json()
+    }
+
+
+
+    searchButton.addEventListener("click", async () => {
+        let result = await getData(cityInput.value)
+        cityName.innerText = result.location.name + ", " + result.location.region
+        dateTime.innerHTML = `Date & Time: ${result.location.localtime}`
+        minTemp.innerHTML = `<h1>${result.current.temp_c}&deg;C</h1>`
+        feelTemp.innerHTML = `Feels Like: ${result.current.feelslike_c}&deg;C`
+        humidity.innerHTML = `Humidity: ${result.current.humidity}`
+        status.innerHTML = `Status: ${result.current.condition.text}`
+
+        // aqi.innerText = `AQI: ${result.current.air_quality}`
+
+
+    });
+    // current weather: http://api.weatherapi.com/v1/current.json?key=f646c7f03f81444e8b793739252006&q=Srinagar&aqi=yes
+
+    //forecast :http://api.weatherapi.com/v1/forecast.json?key=f646c7f03f81444e8b793739252006&q=London&days=6&aqi=no&alerts=no
+</script>
+
+</html>
