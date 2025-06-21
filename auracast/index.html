@@ -75,6 +75,7 @@
 
     #searchButton:hover {
         background-color: #1c75a8;
+        color: white;
     }
 
     .block {
@@ -152,7 +153,7 @@
 
 
     async function getData(city_name) {
-        let promise = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=f646c7f03f81444e8b793739252006&q=${city_name}&days=6&aqi=yes&alerts=no`);
+        let promise = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=f646c7f03f81444e8b793739252006&q=${city_name}&days=6&aqi=yes&alerts=no`);
         return await promise.json()
     }
 
